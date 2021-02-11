@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.function.DoubleToIntFunction;
 
 public class Account {
 
@@ -13,9 +12,6 @@ public class Account {
         this.customer = customer;
     }
 
-    public Customer getCustomer() {
-        return customer;
-    }
 
     public int getBalance(){
         // TODO: skal debugges
@@ -47,16 +43,13 @@ public class Account {
             return getBalance();
     }
 
-
-    public List<Transaction> getTransactions() {
-        return transactions;
-    }
-
     public StringBuilder String() {
         StringBuilder output = new StringBuilder();
         output.append("Customer = ").append(customer.getName()).append("\n");
+        int counter = 1;
         for (Transaction transaction : transactions) {
-            output.append("Transaction = ").append(transaction.getAmount()).append("\n");
+            output.append(transaction.getDate()).append(" @ ").append("Transaction ").append(counter).append(" = ").append(transaction.getAmount()).append("\n");
+            counter++;
         }
             output.append("\nBalance = ").append(getBalance()).append("\n");
         return output;
