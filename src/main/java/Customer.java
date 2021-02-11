@@ -2,7 +2,7 @@ import java.util.Objects;
 
 public class Customer {
 
-    private String name;
+    private final String name;
 
     public Customer(String name) {
         this.name = name;

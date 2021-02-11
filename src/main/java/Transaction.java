@@ -2,8 +2,8 @@ import java.util.Date;
 
 public class Transaction {
 
-    private int amount;
-    private Date date;
+    private final int amount;
+    private final Date date;
 
     public Transaction(int amount, Date date) {
         this.amount = amount;
@@ -17,4 +17,5 @@ public class Transaction {
     public Date getDate() {
         return date;
     }
+
 }
